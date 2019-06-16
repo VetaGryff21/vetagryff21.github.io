@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Abalone</title>
+    <link rel="stylesheet" type="text/css" href="styles/abalonestyle.css"/>
+</head>
+
+<body>
+<form method="post" action="./" name="myform">
+    <div id="wrapper">
+        <div id="content">
+
+            <span id="Timer1" style="visibility:hidden;display:none;"></span>
+            <div class="gameplace_class" id="gameplace_class">
+
+                <div id="gamebox">
+                    <table>
+                        <tbody>
+
+                        <tr>
+                            <div id="headertext">Abalone Game</div>
+                        </tr>
+                        <tr>
+                            <td class="lostballs">
+                                <img src="images/ball5.png" style="margin-top: 4px">
+                                <img src="images/ball5.png" style='margin-top: 4px'>
+                                <img src="images/ball5.png" style='margin-top: 4px'>
+                                <img src="images/ball5.png" style='margin-top: 4px'>
+                                <img src="images/ball5.png" style='margin-top: 4px'>
+                                <img src="images/ball5.png" style='margin-top: 4px'>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="gameboard">
+                                <script type="text/javascript">
+                                    var marbles = "";
+                                    for (j = 0; j <= 8; j++) {
+                                        for (k = 0; k <= 8; k++) {
+                                            if ((k + j >= 4) && (k + j <= 12)) {
+                                                marbles += "<IMG style='margin:2px 6px;' src='images/ball0.png' alt='Blank marble' border=0 onMouseDown='MouseDown(" + k + "," + j + ")'  onMouseOut='MouseOut(" + k + "," + j + ")'>";
+                                            }
+                                        }
+                                        marbles += "<br>";
+                                    }
+                                    document.write(marbles);
+                                </script>
+                            </td>
+                        </tr>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td class="lostballs">
+                                <img src="images/ball5.png" style="margin-top: 4px">
+                                <img src="images/ball5.png" style="margin-top: 4px">
+                                <img src="images/ball5.png" style="margin-top: 4px">
+                                <img src="images/ball5.png" style="margin-top: 4px">
+                                <img src="images/ball5.png" style="margin-top: 4px">
+                                <img src="images/ball5.png" style="margin-top: 4px">
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width:100%;">
+                        <tbody>
+                        <tr>
+                            <td style="text-align:center;width:100%;"><input type="button" value="New game"
+                                                                             style="width:200px;height:40px;font-size:12pt;"
+                                                                             onclick="javascript: Init()">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;width:100%;">
+                            <div id="set">
+                                <select onchange="javascript: SetPlayer(); return false;" size="1" name="players" required>
+                                    <option value="10">player to computer</option>
+                                    <option value="11">player to player</option>
+                                </select>
+                            </div>
+                            </td>
+                        </tr>
+                        </tbody>
+
+
+                </div>
+            </div>
+            <script type="text/javascript" src="scripts/script.js"></script>
+        </div>
+    </div>
+</form>
+</body>
+</html>
