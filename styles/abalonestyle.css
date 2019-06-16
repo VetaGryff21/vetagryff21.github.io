@@ -1,0 +1,44 @@
+div.gameplace_class {
+    margin: 20px;
+    padding: 0;
+    border: 0;
+    position: relative;
+    height: 5000px
+}
+
+img {
+    border: none
+}
+
+#gamebox {
+    width: 430px;
+    margin: auto;
+    text-align: center
+}
+
+.gameboard {
+    background-image: url('../images/board.png');
+    background-repeat: no-repeat;
+    width: 425px;
+    height: 355px;
+    vertical-align: middle;
+    text-align: center
+}
+
+.lostballs {
+    background-image: url('../images/miniboard1.png');
+    background-repeat: no-repeat;
+    width: 203px;
+    height: 37px;
+    vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#headertext {
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    font-size: 30px
+}
